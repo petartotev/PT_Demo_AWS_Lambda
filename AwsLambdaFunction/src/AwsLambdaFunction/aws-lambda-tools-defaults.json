@@ -11,5 +11,5 @@
   "function-runtime": "dotnet6",
   "function-memory-size": 256,
   "function-timeout": 30,
-  "function-handler": "AwsLambdaFunction::AwsLambdaFunction.Function::FunctionHandler"
+  "function-handler": "AwsLambdaFunction::AwsLambdaFunction.MyLambdaFunction::MyLambdaFunctionHandler"
 }
