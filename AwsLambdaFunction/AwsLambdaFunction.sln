@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwsLambdaFunction", "src\AwsLambdaFunction\AwsLambdaFunction.csproj", "{EEA2A6EB-C42F-49EB-95B0-32B0415BA704}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwsLambdaFunction.Tests", "test\AwsLambdaFunction.Tests\AwsLambdaFunction.Tests.csproj", "{3932664B-BCB9-45B0-9836-B76154593E74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEA2A6EB-C42F-49EB-95B0-32B0415BA704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA2A6EB-C42F-49EB-95B0-32B0415BA704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA2A6EB-C42F-49EB-95B0-32B0415BA704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA2A6EB-C42F-49EB-95B0-32B0415BA704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3932664B-BCB9-45B0-9836-B76154593E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3932664B-BCB9-45B0-9836-B76154593E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3932664B-BCB9-45B0-9836-B76154593E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3932664B-BCB9-45B0-9836-B76154593E74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41E52CCD-A8C9-4579-9B69-3333EDE3D0A9}
+	EndGlobalSection
+EndGlobal
