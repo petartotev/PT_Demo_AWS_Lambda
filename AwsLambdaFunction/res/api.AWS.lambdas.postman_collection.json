@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "a13a37bf-7d6b-4261-8455-24a2db9dbdb9",
+		"name": "api.AWS.lambdas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14236078"
+	},
+	"item": [
+		{
+			"name": "PT_Demo_AwsLambdaFunction",
+			"item": [
+				{
+					"name": "https://kfomz3but3tnqea3gnkesphb7u0xqevz.lambda-url.eu-central-1.on.aws/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "None",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Body\": \"This is a test body in order to check if an email would be sent successfully with this content...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-awslambdafunction}}",
+							"host": [
+								"{{url-awslambdafunction}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "https://kfomz3but3tnqea3gnkesphb7u0xqevz.lambda-url.eu-central-1.on.aws/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "None",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Text\": \"This is a test in order to check if an email would be sent successfully...\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://kfomz3but3tnqea3gnkesphb7u0xqevz.lambda-url.eu-central-1.on.aws/",
+									"protocol": "https",
+									"host": [
+										"kfomz3but3tnqea3gnkesphb7u0xqevz",
+										"lambda-url",
+										"eu-central-1",
+										"on",
+										"aws"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 28 May 2022 18:12:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "92b143be-671d-4b86-940c-600d71221fa6"
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "root=1-62926622-178ddd0d126fc568559c981f;sampled=0"
+								}
+							],
+							"cookie": [],
+							"body": "THIS IS A TEST IN ORDER TO CHECK IF AN EMAIL WOULD BE SENT SUCCESSFULLY..."
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url-awslambdafunction",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "url-myfirstawslambdafunction",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
