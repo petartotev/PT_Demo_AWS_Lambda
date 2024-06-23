@@ -7,6 +7,8 @@
     - [Configure New Lambda](#configure-new-lambda)
     - [Implement Lambda](#implement-lambda)
     - [Deploy Lambda](#deploy-lambda)
+    - [Execute Lambda using Function URL](#execute-lambda-using-function-url)
+    - [Delete Lambda](#delete-lambda)
 - [Links](#links)
 
 ## AwsLambdaFunction (2022)
@@ -166,6 +168,60 @@ Created publish archive (C:\mydir\PT_Demo_AWS_Lambda\src\AwsLambdaFunctionSecond
 Updating code for existing function AwsLambdaFunctionSecond
 ```
 
-11. Remove IAM Role and Lambda when you finish testing!
+### Execute Lambda using Function URL
+
+11. Go to AWS Console > Choose Region > Lambda > Check available Lambdas.  
+Open `AwsLambdaFunctionSecond`, which should be deployed and ready to be used.
+
+12. Open `Configuration` tab > `Function URL` > [ Create Function URL ]
+
+- Auth type: NONE (Lambda won't perform IAM authentication on requests to your function URL)
+- Additional settings
+    - Invoke mode: BUFFERED (default)
+- [ Save ]
+
+⚠️ WARNING: Using Auth type: NONE is the easiest and fastest approach for the purpose of the demo, but it should be avoided in any other case.  
+
+Finally, go to Lambda's main page and copy `Function URL`.
+
+13. In Postman, you can invoke the Lambda using the `Function URL` provided in the last steps:
+
+```
+https://54fakefunctionurltigrewc7istogq1.lambda-url.eu-central-1.on.aws/
+
+Body:
+{
+    "Title": "MyTitle",
+    "Description": "MyDescription",
+    "Author": "MyAuthor",
+    "CreatedDate": "2024-06-01",
+    "IsInEnglish": true,
+    "Priority": 1
+}
+```
+
+Output:
+
+```
+2024-06-21 19/10/45
+-------------------
+TITLE: MYTITLE
+DESCRIPTION: MYDESCRIPTION
+AUTHOR: MYAUTHOR
+CREATEDDATE: 2024-06-01 00/00/00
+ISINENGLISH: TRUE
+PRIORITY: 1
+```
+
+✅ SUCCESS!
+
+### Delete Lambda
+
+14. At the end of the Demo, don't forget to remove the following infrastructure from AWS:
+- Lambda
+- IAM Role
+- IAM Policy
+- IAM User Groups?
 
 ## Links
+- https://docs.aws.amazon.com/lambda/latest/dg/urls-tutorial.html
